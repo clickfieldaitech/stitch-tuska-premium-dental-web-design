@@ -28,7 +28,7 @@ export interface Testimonial {
   role: string;
   rating: number;
   review: string;
-  image: string;
+  image?: string;
   /** CSS object-position for the avatar crop; defaults to "center 25%" if omitted. */
   imageFocus?: string;
 }

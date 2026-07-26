@@ -29,22 +29,23 @@ const peopleDims: Record<string, { width: number; height: number }> = {
   "IMG-20260717-WA0030.jpg": { width: 1200, height: 1599 },
   "IMG-20260719-WA0130.jpg.jpeg": { width: 1200, height: 1600 },
   "IMG-20260719-WA0133.jpg.jpeg": { width: 1200, height: 1600 },
-  "IMG-20260719-WA0145.jpg.jpeg": { width: 1200, height: 1600 },
   "IMG-20260719-WA0146.jpg.jpeg": { width: 1200, height: 1600 },
   "IMG-20260719-WA0147.jpg.jpeg": { width: 1200, height: 1600 },
-  "IMG-20260719-WA0148.jpg.jpeg": { width: 1200, height: 1600 },
+  "IMG-20260719-WA0148.jpg.jpeg": { width: 1024, height: 575 },
   "IMG-20260719-WA0150.jpg.jpeg": { width: 1200, height: 1600 },
   "IMG-20260719-WA0151.jpg.jpeg": { width: 1200, height: 1600 },
+  "IMG-20260722-WA0000.jpg": { width: 1103, height: 1600 },
+  "IMG-20260722-WA0001.jpg": { width: 1476, height: 1600 },
+  "IMG-20260722-WA0002.jpg": { width: 1600, height: 1200 },
+  "dr-malavika.jpg": { width: 1122, height: 1402 },
   "IMG_1439-1.jpg": { width: 2000, height: 1333 },
   "IMG_2113.jpg": { width: 2000, height: 3000 },
   "IMG_2125.jpg": { width: 2000, height: 1333 },
   "IMG_2151.jpg": { width: 2000, height: 1333 },
   "IMG_2594.jpg": { width: 2000, height: 1333 },
-  "IMG_3473.jpg": { width: 2000, height: 3000 },
-  "IMG_3474.jpg": { width: 2000, height: 3000 },
   "IMG_3475.jpg": { width: 2000, height: 3000 },
-  "IMG_3476.jpg": { width: 2000, height: 1333 },
   "IMG_3478.jpg": { width: 2000, height: 1333 },
+  "file_00000000ce2c81faac090099c4cddc0a.png": { width: 1086, height: 1448 },
 };
 
 function realPhoto(filename: string) {
@@ -67,20 +68,19 @@ export const clinicImages = {
   kidsPlayCorner: realPhoto("IMG_2113.jpg"),
   // Used only in about-teaser.tsx ("A young Tuskaè visitor")
   doctorWithChild: realPhoto("IMG_3478.jpg"),
-  // Additional real people photos for About section and gallery
-  aboutTeam: realPhoto("IMG-20260719-WA0145.jpg.jpeg"),
-  aboutChild: realPhoto("IMG-20260719-WA0130.jpg.jpeg"),
+  // Used only in about-teaser.tsx — replaces the earlier two-photo grid
+  aboutFriends: realPhoto("IMG-20260719-WA0148.jpg.jpeg"),
 };
 
-// Dr. Malavika's real photo — single lead clinician, so every doctor-photo slot
-// (profile, gallery "Doctors" category) points to the same real image.
-// NOTE: still the stock placeholder — swap once her real photo is provided.
-export const doctorPhotos = [clinicPhoto("doctor.jpg"), clinicPhoto("doctor.jpg")];
-export const doctorPhotoDims = clinicDims["doctor.jpg"];
+// Dr. Malavika's real photo (taken in front of the actual Tuskaè clinic signage).
+// Used ONLY for her — never reused for any other person/section on the site.
+export const doctorPhotos = [realPhoto("dr-malavika.jpg"), realPhoto("dr-malavika.jpg")];
+export const doctorPhotoDims = peopleDims["dr-malavika.jpg"];
 
 // Every real photo with its intrinsic dimensions, for the gallery's masonry layout
 // (natural aspect ratio, never cropped) — duplicates with the slots above are fine here.
 export const galleryPeoplePhotos = [
+  realPhotoWithDims("IMG-20260719-WA0130.jpg.jpeg"),
   realPhotoWithDims("IMG-20260719-WA0146.jpg.jpeg"),
   realPhotoWithDims("IMG-20260719-WA0147.jpg.jpeg"),
   realPhotoWithDims("IMG-20260719-WA0148.jpg.jpeg"),
@@ -92,15 +92,16 @@ export const galleryPeoplePhotos = [
   realPhotoWithDims("IMG_2125.jpg"),
   realPhotoWithDims("IMG_2151.jpg"),
   realPhotoWithDims("IMG_2594.jpg"),
-  realPhotoWithDims("IMG_3473.jpg"),
-  realPhotoWithDims("IMG_3474.jpg"),
   realPhotoWithDims("IMG_3475.jpg"),
-  realPhotoWithDims("IMG_3476.jpg"),
   realPhotoWithDims("IMG_3478.jpg"),
   realPhotoWithDims("IMG-20260714-WA0047.jpg"),
   realPhotoWithDims("IMG-20260717-WA0027.jpg"),
   realPhotoWithDims("IMG-20260717-WA0028.jpg"),
   realPhotoWithDims("IMG-20260717-WA0030.jpg"),
+  realPhotoWithDims("IMG-20260722-WA0000.jpg"),
+  realPhotoWithDims("IMG-20260722-WA0001.jpg"),
+  realPhotoWithDims("IMG-20260722-WA0002.jpg"),
+  realPhotoWithDims("file_00000000ce2c81faac090099c4cddc0a.png"),
 ];
 
 export const galleryClinicPhotos = {

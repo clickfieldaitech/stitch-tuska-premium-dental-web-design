@@ -22,4 +22,29 @@ export const testimonials: Testimonial[] = [
     review:
       "What impressed us most was the holistic approach. Instead of treating only the teeth, Dr. Malavika coordinated with the ENT specialist and guided us through every step. We truly felt that our child's overall health was the priority.",
   },
+  {
+    name: "Karthik Subramaniam",
+    role: "Root canal patient",
+    rating: 5,
+    review:
+      "I'd heard horror stories about root canals for years. Dr. Malavika finished mine in a single visit and I genuinely felt nothing beyond the initial anesthesia. The clinic's hygiene standards are also visibly excellent.",
+    image: "/images/people/IMG_3475.jpg",
+  },
+  {
+    name: "Divya Ramesh",
+    role: "Parent, orthodontics patient",
+    rating: 5,
+    review:
+      "Both my teenagers are on clear aligners with Dr. Malavika now. The tracking app and monthly scans make it so easy to see progress, and the kids actually enjoy their check-ins.",
+    image: "/images/people/IMG-20260717-WA0030.jpg",
+  },
+  {
+    name: "Arvind Krishnamurthy",
+    role: "Emergency care patient",
+    rating: 5,
+    review:
+      "Chipped a tooth on a Sunday evening and was seen within the hour. The emergency line actually gets answered by a real person, not voicemail. That kind of reliability matters.",
+    image: "/images/people/IMG-20260719-WA0133.jpg.jpeg",
+    imageFocus: "center 10%",
+  },
 ];

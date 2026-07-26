@@ -27,22 +27,14 @@ export function AboutTeaser() {
               label="Kids play corner"
               objectFit="cover"
               objectPosition="center center"
-              className="w-full aspect-[16/9] rounded-3xl"
+              className="h-56 w-full rounded-3xl sm:h-72 lg:h-[26rem]"
             />
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <PlaceholderImage
-                src={clinicImages.aboutChild}
-                label="A young Tuskaè visitor"
-                objectFit="cover"
-                className="w-full aspect-square rounded-3xl"
-              />
-              <PlaceholderImage
-                src={clinicImages.aboutTeam}
-                label="Tuskaè team member with a young visitor"
-                objectFit="cover"
-                className="w-full aspect-square rounded-3xl"
-              />
-            </div>
+            <PlaceholderImage
+              src={clinicImages.aboutFriends}
+              label="Two smiling Tuskaè visitors"
+              objectFit="cover"
+              className="h-56 w-full rounded-3xl sm:h-72 lg:h-[26rem]"
+            />
           </div>
         </motion.div>
 

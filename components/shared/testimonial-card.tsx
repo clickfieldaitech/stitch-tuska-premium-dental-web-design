@@ -3,11 +3,10 @@
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { fadeUp, viewportOnce } from "@/lib/motion";
-import { StarRating } from "@/components/shared/star-rating";
-import { PlaceholderImage } from "@/components/shared/placeholder-image";
 import type { Testimonial } from "@/types/content";
 
 export function TestimonialCard({ testimonial, index = 0 }: { testimonial: Testimonial; index?: number }) {
+  const initial = testimonial.name.charAt(0).toUpperCase();
   return (
     <motion.div
       initial="hidden"
@@ -19,13 +18,14 @@ export function TestimonialCard({ testimonial, index = 0 }: { testimonial: Testi
     >
       <Quote className="h-8 w-8 text-[var(--gold)]/60" />
       <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--ink)]">&ldquo;{testimonial.review}&rdquo;</p>
-      <div className="mt-6 flex items-center gap-3">
-        <div className="h-12 w-12 rounded-full bg-[var(--turquoise)]/15" aria-hidden />
+      <div className="mt-6 flex items-center gap-4">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--turquoise)]/15 text-[var(--turquoise-dark)]">
+          <span className="font-heading text-lg font-semibold">{initial}</span>
+        </div>
         <div>
           <p className="text-sm font-semibold text-[var(--ink)]">{testimonial.name}</p>
           <p className="text-xs text-[var(--ink-muted)]">{testimonial.role}</p>
         </div>
-        <StarRating rating={testimonial.rating} className="ml-auto" />
       </div>
     </motion.div>
   );

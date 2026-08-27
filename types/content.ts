@@ -48,3 +48,28 @@ export interface FaqItem {
   question: string;
   answer: string;
 }
+
+/** A single photograph shown in the Events gallery. */
+export interface EventItem {
+  src: string;
+  /** Human-readable event title, e.g. "School Dental Screening Camp". */
+  title: string;
+  /** Category label, matching one of the EventCategory titles. */
+  category: string;
+  /** Optional short caption describing the activity. */
+  description: string;
+  /** Intrinsic pixel dimensions — used to lay out the masonry grid without cropping. */
+  width: number;
+  height: number;
+}
+
+/** A card describing one class of community initiative on the Events page. */
+export interface EventCategory {
+  id: string;
+  title: string;
+  description: string;
+  /** Icon name resolved through components/shared/icon-map.ts. */
+  icon: string;
+  /** Sample activity tags/highlights shown on the card. */
+  tags: string[];
+}

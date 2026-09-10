@@ -29,6 +29,14 @@ export const eventCategories: EventCategory[] = [
     icon: "HeartHandshake",
     tags: ["Beyond the Clinic", "Accessible Care", "Compassion"],
   },
+  {
+    id: "our-clinic",
+    title: "Our Clinic",
+    description:
+      "A calm, modern space designed to put children and parents at ease, from reception to treatment room.",
+    icon: "Building2",
+    tags: ["Modern Facility", "Child-Friendly Design", "Advanced Equipment"],
+  },
 ];
 
 // Order mirrors public/images/events2 for a visually balanced masonry mix of
@@ -81,5 +89,37 @@ export const eventItems: EventItem[] = [
     description: "Compassionate pediatric dental care reaching families beyond the clinic.",
     width: 2560,
     height: 1280,
+  },
+  {
+    src: "/images/events2/clinic-reception-signage.jpg",
+    title: "Reception & Welcome Area",
+    category: "Our Clinic",
+    description: "A warm, calming welcome area designed to ease the nerves of first-time visitors.",
+    width: 2000,
+    height: 1500,
+  },
+  {
+    src: "/images/events2/clinic-treatment-room.jpg",
+    title: "Modern Treatment Room",
+    category: "Our Clinic",
+    description: "Fully equipped treatment rooms built around comfort, precision, and safety.",
+    width: 1500,
+    height: 2000,
+  },
+  {
+    src: "/images/events2/clinic-consed-sedation.jpg",
+    title: "Conscious Sedation Setup",
+    category: "Our Clinic",
+    description: "Dedicated conscious sedation equipment for anxious or fearful young patients.",
+    width: 1500,
+    height: 2000,
+  },
+  {
+    src: "/images/events2/clinic-office-nameplate.jpg",
+    title: "Dr. Malavika's Office",
+    category: "Our Clinic",
+    description: "Dr. Malavika's office at Tuskaè, where every treatment plan begins.",
+    width: 2000,
+    height: 1500,
   },
 ];

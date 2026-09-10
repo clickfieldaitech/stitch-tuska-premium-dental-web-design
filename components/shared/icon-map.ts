@@ -21,6 +21,7 @@ import {
   Megaphone,
   HeartHandshake,
   ClipboardCheck,
+  Building2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,4 +44,5 @@ export const iconMap: Record<string, LucideIcon> = {
   Megaphone,
   HeartHandshake,
   ClipboardCheck,
+  Building2,
 };

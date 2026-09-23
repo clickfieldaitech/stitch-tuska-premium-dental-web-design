@@ -36,6 +36,7 @@ export const siteConfig = {
     { label: "About", href: "/about" },
     { label: "Gallery", href: "/gallery" },
     { label: "Events", href: "/events" },
+    { label: "Blog", href: "/blog" },
     { label: "FAQ", href: "/faq" },
   ],
   footerLinks: {
@@ -45,6 +46,7 @@ export const siteConfig = {
       { label: "Clinic Gallery", href: "/gallery" },
     ],
     resources: [
+      { label: "Blog", href: "/blog" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy-policy" },

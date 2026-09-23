@@ -11,6 +11,17 @@ export interface Service {
   faqs?: { question: string; answer: string }[];
 }
 
+export interface Blog {
+  slug: string;
+  title: string;
+  excerpt: string;
+  /** Paragraphs of body copy, rendered in order. */
+  content: string[];
+  category: string;
+  readingTime: string;
+  publishedAt: string;
+}
+
 export interface Doctor {
   slug: string;
   name: string;
